@@ -11,7 +11,7 @@
 
 ## Extended Training Results (5 Epochs)
 After extending training for 5 epochs using the best setup:
-- Validation Loss: **0.66** (↓13.2% from baseline)  
+- **Validation Loss: **0.66** (↓13.2% from baseline)**
 - Perplexity: **1.97** (↓10.5% from baseline)  
 - BLEU Score: **23.01** (↑13.5% from baseline)  
 - ROUGE-1: **55.46** (↑7.3% from baseline)  
