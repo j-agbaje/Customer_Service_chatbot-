@@ -2,14 +2,13 @@
 
 A domain-specific chatbot fine-tuned on customer service interactions using Google's FLAN-T5 transformer model. This project demonstrates natural language understanding and generation for automated customer support.
 
-**🎯 Achievement: 13% performance improvement over baseline** through systematic hyperparameter tuning and extended training (5 epochs).
+** Achievement: 13% performance improvement over baseline** through systematic hyperparameter tuning and extended training (5 epochs).
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
 [![Hugging Face](https://img.shields.io/badge/🤗-Transformers-yellow.svg)](https://huggingface.co/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## 📋 Table of Contents
+## Table of Contents
 - [Project Overview](#project-overview)
 - [Dataset](#dataset)
 - [Model Architecture](#model-architecture)
@@ -19,10 +18,9 @@ A domain-specific chatbot fine-tuned on customer service interactions using Goog
 - [Project Structure](#project-structure)
 - [Results & Analysis](#results--analysis)
 - [Demo Video](#demo-video)
-- [Future Improvements](#future-improvements)
 - [Contributors](#contributors)
 
-## 🎯 Project Overview
+## Project Overview
 
 ### Key Achievement
 **13% average improvement over baseline** across all evaluation metrics through:
@@ -56,7 +54,7 @@ This chatbot automates responses to common customer inquiries including:
 - **Consistency**: Provides uniform, accurate responses
 - **Human Agent Support**: Frees agents to handle complex issues
 
-## 📊 Dataset
+## Dataset
 
 ### Source
 **Bitext Customer Support LLM Chatbot Training Dataset**
@@ -82,7 +80,7 @@ This chatbot automates responses to common customer inquiries including:
 - Validation: 10% (~2,687 samples)
 - Stratified by intent categories for balanced representation
 
-## 🏗️ Model Architecture
+## Model Architecture
 
 ### Base Model
 **Google FLAN-T5 Base** (`google/flan-t5-base`)
@@ -91,11 +89,11 @@ This chatbot automates responses to common customer inquiries including:
 - Pre-training: Instruction-tuned on diverse NLP tasks
 
 ### Why FLAN-T5?
-- ✅ Instruction-following capabilities (ideal for task-oriented dialogue)
-- ✅ Text-to-text framework (natural fit for Q&A)
-- ✅ Efficient performance-to-size ratio
-- ✅ Strong zero-shot baseline
-- ✅ Excellent controllability for specific response formats
+- Instruction-following capabilities (ideal for task-oriented dialogue)
+- Text-to-text framework (natural fit for Q&A)
+- Efficient performance-to-size ratio
+- Strong zero-shot baseline
+- Excellent controllability for specific response formats
 
 ### Input/Output Format
 ```
@@ -106,19 +104,19 @@ Max Input Length:  256 tokens
 Max Output Length: 512 tokens
 ```
 
-## 📈 Performance Metrics
+## Performance Metrics
 
 ### Experiment Results
 
 | Experiment | LR | Batch | Weight Decay | Warmup | Train Loss | Val Loss | Perplexity | BLEU | ROUGE-1 | ROUGE-2 | ROUGE-L |
 |------------|-----|-------|--------------|--------|------------|----------|------------|------|---------|---------|---------|
 | **Baseline** | 5e-5 | 8 | 0.01 | 0 | 0.8859 | 0.7600 | 2.20 | 20.28 | 51.69 | 27.93 | 37.34 |
-| **Higher LR** ⭐ | 1e-4 | 8 | 0.01 | 0 | 0.7877 | 0.6960 | 2.05 | 21.79 | 53.66 | 29.79 | 38.82 |
+| **Higher LR**  | 1e-4 | 8 | 0.01 | 0 | 0.7877 | 0.6960 | 2.05 | 21.79 | 53.66 | 29.79 | 38.82 |
 | **Small Batch** | 3e-5 | 4 | 0.01 | 0 | 0.9118 | 0.7776 | 2.27 | 20.07 | 52.35 | 27.93 | 37.58 |
 | **Lower Weight Decay** | 5e-5 | 8 | 0.001 | 0 | 0.8855 | 0.7595 | 2.19 | 19.42 | 50.97 | 27.11 | 36.61 |
 | **With Warmup** | 5e-5 | 8 | 0.01 | 500 | 0.8903 | 0.7631 | 2.20 | 19.73 | 51.77 | 27.29 | 37.18 |
 
-### Best Model: Higher LR Configuration ⭐
+### Best Model: Higher LR Configuration 
 **Improvement over Baseline:**
 - Validation Loss: **-8.4%** (0.76 → 0.696)
 - Perplexity: **-6.8%** (2.20 → 2.05)
@@ -149,11 +147,11 @@ After extending the best model to 5 epochs:
 - **BLEU**: Word overlap with reference answers (0-100; higher is better)
 - **ROUGE-1/2/L**: N-gram and sequence overlap metrics (0-100; higher is better)
 
-## 🚀 Installation
+##  Installation
 
 ### Prerequisites
 - Python 3.8+
-- CUDA-capable GPU (recommended)
+- Colab pro A100 GPU (recommended) or CUDA-capable GPU 
 - 16GB+ RAM
 
 ### Setup
