@@ -125,7 +125,7 @@ Max Output Length: 512 tokens
 - ROUGE-2: **+6.7%** (27.93 → 29.79)
 - ROUGE-L: **+4.0%** (37.34 → 38.82)
 
-### Extended Training Results (5 Epochs)
+### Extended Training of Higher LR Results (5 Epochs)
 After extending the best model to 5 epochs:
 - Validation Loss: **0.66** (-13.2% vs baseline)
 - Perplexity: **1.97** (-10.5% vs baseline)
