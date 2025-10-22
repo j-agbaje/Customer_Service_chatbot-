@@ -1,0 +1,24 @@
+# Core libraries
+pandas==2.2.3
+numpy==1.26.4
+matplotlib==3.9.2
+scikit-learn==1.5.2
+
+# Hugging Face ecosystem
+transformers==4.45.2
+datasets==3.0.2
+evaluate==0.4.3
+
+# TensorFlow
+tensorflow==2.17.0
+keras==3.4.1
+
+# NLP utilities
+nltk==3.9.1
+rouge-score==0.1.2
+wordcloud==1.9.3
+
+# System & cleaning helpers
+regex==2024.9.11
+protobuf==5.28.3
+
