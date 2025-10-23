@@ -188,60 +188,37 @@ evaluate>=0.4.0
 
 ## Usage
 
-### Download Pre-trained Model
+### Run the Chatbot
 The fine-tuned model is available here:
-- [Google Drive - Final Model](https://drive.google.com/drive/folders/1tVAeLDHVO9SToPKyoEpkaFGl_vQ8He3X?usp=sharing)
+- [Google Drive - Final Model](https://drive.google.com/drive/folders/135V1rOiU19NYmbttEOTGrYRuYJvyVwl3?usp=sharing)
 
-Download and extract to `./models/final_chatbot_model/`
-
-### Running the Chatbot
+run `./notebooks/Chatbot_UI.ipynb`
 
 #### Gradio Web Interface (Recommended)
-```bash
-python app.py
-```
-Then open `http://localhost:7860` in your browser.
+
+Then open `http://localhost:7860`  or provided share link in your browser.
 
 ## Project Structure
 
 ```
 Customer_Service_chatbot-/
 │
-├── data/
-│   ├── raw/                      # Original dataset
-│   ├── processed/                # Preprocessed data
-│   └── README.md                 # Data documentation
+├── .gradio/
+│   ├── flagged/                      
+│       ├── dataset1.csv             
+│   └── certificate.pem                
 │
 ├── models/
-│   ├── final_chatbot_model/      # Best trained model
-│   ├── checkpoints/              # Training checkpoints
-│   └── experiments/              # Experimental models
+│   └── models.md
 │
 ├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_preprocessing.ipynb
-│   ├── 03_model_training.ipynb
-│   ├── 04_evaluation.ipynb
-│   └── 05_experiments.ipynb
+│   ├── Chatbot_UI.ipynb
+│   └── customer_service_chatbot_training.ipynb
 │
-├── src/
-│   ├── data_preprocessing.py     # Data cleaning & tokenization
-│   ├── model.py                  # Model architecture & training
-│   ├── evaluation.py             # Metrics calculation
-│   └── utils.py                  # Helper functions
-│
-├── configs/
-│   ├── baseline_config.json
-│   └── best_config.json
-│
-├── app.py                        # Gradio web interface
-├── chatbot_cli.py               # Command-line interface
-├── train.py                     # Training script
-├── evaluate.py                  # Evaluation script
-├── requirements.txt             # Python dependencies
-├── experiments.md               # Detailed experiment results
+├── .gitignore                 # Helper functions
+├── experiments.md
 ├── README.md                    # This file
-└── LICENSE
+└── requirements.txt             # Python dependencies
 
 ```
 
